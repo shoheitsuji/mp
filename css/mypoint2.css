@@ -7,10 +7,9 @@ body{
 h2{
    font-size:200%;
    font-weight:bold;
-   margin:5px;
+   margin:5px 0 10px 0;
   }
   
-
 p.note { 
  margin-left: 1em;
  text-indent: -1em;
