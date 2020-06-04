@@ -9,13 +9,11 @@ h2{
    font-weight:bold;
    margin:5px 0 10px 0;
   }
-  
+p  {font-size:110%;}
 p.note { 
  margin-left: 1em;
  text-indent: -1em;
  margin-bottom:0;
  text-align:left;
- font-size:86%;
- /*color:gray;*/
   }
 p.note:before { content:"※";}
