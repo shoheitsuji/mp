@@ -4,17 +4,17 @@
    Padding:10px;
    font-size:120%;
   }
-.midashi{
+p.midashi{
    font-size:200%;
    font-weight:bold;
    margin:5px 0 10px 0;
   }
 
-.note { 
+p.note { 
  margin-left: 1em;
  text-indent: -1em;
  margin-bottom:0;
  text-align:left;
    font-size:85%;
   }
-.note:before { content:"※";}
+p.note:before { content:"※";}
