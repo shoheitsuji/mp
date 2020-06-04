@@ -8,11 +8,11 @@
    font-weight:bold;
    margin:5px 0 10px 0;
   }
-p.lead  {font-size:115%;}
-p.note { 
+.lead  {font-size:115%;}
+.note { 
  margin-left: 1em;
  text-indent: -1em;
  margin-bottom:0;
  text-align:left;
   }
-p.note:before { content:"※";}
+.note:before { content:"※";}
