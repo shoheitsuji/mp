@@ -8,7 +8,7 @@
    font-weight:bold;
    margin:5px 0 10px 0;
   }
-.lead  {font-size:115%;}
+p{font-size:115%;}
 .note { 
  margin-left: 1em;
  text-indent: -1em;
