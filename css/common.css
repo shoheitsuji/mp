@@ -1,0 +1,74 @@
+.box .box-header .btn-success a,
+.modal-dialog .modal-content .modal-footer  a,
+.skin-red .sidebar-menu .treeview-menu>li.active>a,
+.skin-red .sidebar-menu .treeview-menu>li>a:focus,
+.skin-red .main-header .navbar .nav>li>p,
+.skin-red .sidebar-menu>li>a:focus {
+        color: #fff;
+}
+
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header {
+    height: auto;
+}
+
+.login-box.password-box {
+    width:530px;
+}
+
+.navbar-nav>li>p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+.nav>li>p {
+    position: relative;
+    display: block;
+    padding: 15px 15px;
+    margin: 0;
+}
+
+.navbar-nav>li>a>p {
+ margin: 0px;
+}
+
+.btn.register {
+    margin: 20px 0;
+}
+
+.btn.register a{
+    color: #fff;
+}
+
+textarea {
+    resize: none;
+}
+
+/*検索結果メッセージ*/
+.result-message {
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+#updatePassword .columnName {
+    white-space: nowrap;
+}
+
+div.box .box-body .row {
+    margin-bottom: 15px;
+}
+
+/*テーブル内のチェックボックスを中央に寄せる*/
+table tr td input.checkbox {
+    margin: 12px 0 0 11px;
+}
+.table-responsive > .table > thead > tr > th {
+    white-space: nowrap;
+}
+
+/*必須項目に表示されるボーダーを削除*/
+.input-group .input-group-addon.required {
+    padding-left: 4px;
+    padding-right: 4px;
+   border: 0px;
+}
