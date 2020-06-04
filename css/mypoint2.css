@@ -18,3 +18,16 @@ p.note {
    font-size:85%;
   }
 p.note:before { content:"※";}
+
+.botan{
+  width:280px;
+  Padding:15px;
+  display:block;
+  background:#00c64f;
+  border-radius:30px;
+  text-align:center;
+  color:#fff;
+  font-weight:bold;
+  font-size:130%;
+  margin: 15px auto;
+}
