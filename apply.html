@@ -53,17 +53,19 @@
                     <section>
                         <span style="font-size:14px;">　ボタンよりマイナポイントアプリに移動して手続きを行ってください。</span>
                     </section>
-                   -->
+                   
                    
                     <div class="apply-col" style="width:100%;" align="center">
                         <button type="button" th:class="${applyModel.applyBtnActiveFlg != '1'}? 'applybtn_60 btn-disabled' : 'applybtn_60 btn-success'" data-toggle="modal" th:disabled="${applyModel.applyBtnActiveFlg != '1'}" th:onclick="|startAPP('${applyModel.urlWithAppLinkCode}');|"><span th:text="${applyModel.butTitleMsg}">マイナポイント申込</span></button>
-                    
-                      <!--
                         <p class="font_11" align="center" style="padding-top: 10px;">【申込期間】<span style="font-size: 10px" th:text="${#dates.format(applyModel.applyStartDate,'yyyy年MM月dd日')}" >申込完了日</span>～<span style="font-size: 10px" th:text="${#dates.format(applyModel.applyEndDate,'yyyy年MM月dd日')}" >申込完了日</span></p>
-                      -->
+                      
                     </div>
+                    -->
                 </div>
                 
+                   <div class="botan">
+                     <span>マイナポイント申込</span>
+                   </div>
                 <p></p> 
                   <p class="note text-danger">マイナポイントのお申込みにあたっては、事前にマイナンバーカードとマイナポイントアプリが必要となります。</p>
      </p>
