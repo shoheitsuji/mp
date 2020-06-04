@@ -77,10 +77,16 @@ p.note:before { content:"※";}
                 -->
                     <div class="apply-col" style="width:100%;" align="center">
                         <button type="button" th:class="${applyModel.applyBtnActiveFlg != '1'}? 'applybtn_60 btn-disabled' : 'applybtn_60 btn-success'" data-toggle="modal" th:disabled="${applyModel.applyBtnActiveFlg != '1'}" th:onclick="|startAPP('${applyModel.urlWithAppLinkCode}');|"><span th:text="${applyModel.butTitleMsg}">マイナポイント申込</span></button>
+                      <!--
                         <p class="font_11" align="center" style="padding-top: 10px;">【申込期間】<span style="font-size: 10px" th:text="${#dates.format(applyModel.applyStartDate,'yyyy年MM月dd日')}" >申込完了日</span>～<span style="font-size: 10px" th:text="${#dates.format(applyModel.applyEndDate,'yyyy年MM月dd日')}" >申込完了日</span></p>
-                    </div>
+                      -->
+                   <p class="note red">マイナポイントのお申込みにあたっては、事前にマイナンバーカードとマイナポイントアプリが必要となります。</span>
+     </p>
+                   <p class="note">お申込みされると<a href="https://famidigi.jp/famipay/mp/terms_of_use" target=_blank">FamiPayマイナポイント規約</a>が適用されます。</p>
+    
+                   </div>
                 </div>
-        
+        <!--
                 <div id="myKeyApply" class="apply-col-lg-1" style="display:none">
                     <div class="apply-col-lg-1">
                         <p align="center" style="width:100%; border-bottom:1px solid #999; clear:both;padding-top: 10px;"><span style="font-size:13px">マイキープラットフォームから直接お申込みされる場合</span></p>
@@ -97,6 +103,7 @@ p.note:before { content:"※";}
                         <a th:href="'familymart-app-internal://open-url?url=' + ${applyModel.myKeyUrl}">マイキープラットフォーム</a>
                     </div>
                 </div>
+           -->
             </form>
         </div>
         <script th:src="@{/js/jquery.min.js}"></script>
