@@ -1,1 +1,68 @@
-apply.html
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="shortcut icon" type="image/ico" th:href="@{/favicon.ico}"/>
+        <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+        <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}" />
+        <link rel="stylesheet" th:href="@{/css/ionicons.min.css}" />
+        <link rel="stylesheet" th:href="@{/css/AdminLTE.min.css}" />
+        <link rel="stylesheet" th:href="@{/css/blue.css}" />
+        <link rel="stylesheet" th:href="@{/css/mypoint.css}" />
+        <title>マイナポイント申込画面</title>
+    </head>
+    <body class="hold-transition login-page">
+        <div class="applybox" style="height:100%">
+            <form role="form" action="#" th:action="@{/login}" th:object="${loginForm}" method="post" autocomplete="off">
+                <div class="apply-col-lg-1" align="center" style="padding-top: 15px;padding-bottom:15px;border-bottom:1.5px solid #00ab4e; clear:both;">
+                    <button id="fmApplyBtn" type="button" class="applybtn-1 btn-selected" data-toggle="modal" style="float:left;" th:onclick="|showFmApply(${applyModel.applyBtnActiveFlg});|">FamiPayから申込</button>
+                    <button id="myKeyApplyBtn" type="button" th:class="${applyModel.applyBtnActiveFlg != '1'}? 'applybtn_40 btn-disabled' : 'applybtn-2 btn-notSelected'" th:disabled="${applyModel.applyBtnActiveFlg != '1'}" data-toggle="modal" style="padding-left:10px;" th:onclick="|showMyKeyApply(${applyModel.applyBtnActiveFlg});|">マイキープラットフォームから申込</button>
+                </div>
+        
+                <div id="fmApply" class="font_14 apply-col-lg-1" style="display:inline-block">
+                    <span class="font_16">STEP1</span>
+                    <section>
+                        　                    FamiPayからマイナポイントを申込むには「マイナポイント」と「JPKI利用者ソフト」という専用アプリのダウンロードが必要です。
+                        <br>
+                                                  アプリをお持ちでない方は以下のリンクの説明に従ってアプリを設定してください。   
+                    </section>
+                    <section>
+                        <a href="familymart-app-internal://open-url?url=https://famidigi.jp/famipay/mp/index.html" style="color:rgba(3,65,251,1);padding-left: 15px">マイナポイント申込説明ページ</a>
+                    </section>
+                    <br>
+                    <span class="font_16">STEP2</span>
+                    <section>
+                        <span style="font-size:14px;">　ボタンよりマイナポイントアプリに移動して手続きを行ってください。</span>
+                    </section>
+                    <div class="apply-col" style="width:100%;" align="center">
+                        <button type="button" th:class="${applyModel.applyBtnActiveFlg != '1'}? 'applybtn_60 btn-disabled' : 'applybtn_60 btn-success'" data-toggle="modal" th:disabled="${applyModel.applyBtnActiveFlg != '1'}" th:onclick="|startAPP('${applyModel.urlWithAppLinkCode}');|"><span th:text="${applyModel.butTitleMsg}">マイナポイント申込</span></button>
+                        <p class="font_11" align="center" style="padding-top: 10px;">【申込期間】<span style="font-size: 10px" th:text="${#dates.format(applyModel.applyStartDate,'yyyy年MM月dd日')}" >申込完了日</span>～<span style="font-size: 10px" th:text="${#dates.format(applyModel.applyEndDate,'yyyy年MM月dd日')}" >申込完了日</span></p>
+                    </div>
+                </div>
+        
+                <div id="myKeyApply" class="apply-col-lg-1" style="display:none">
+                    <div class="apply-col-lg-1">
+                        <p align="center" style="width:100%; border-bottom:1px solid #999; clear:both;padding-top: 10px;"><span style="font-size:13px">マイキープラットフォームから直接お申込みされる場合</span></p>
+                    </div>
+                    <div class="apply-col-lg-1">
+                        <p><span style="font-size:13px">マイキープラットフォームよりマイキーIDを発行いただき、利用者マイページからマイナポイントの申込を行ってください。このとき、申込情報に次の決済サービスID、セキュリティコードを入力してください。</span></p>
+                    </div>
+                    <div class="apply-col-lg-1" style="padding-bottom: 15px;">
+                        <div class="apply-col-lg-2" style="width:100%; height:120px; border:1px solid #999; clear:both;border-radius:6px;line-height:12px">
+                            <p align="left" style="padding-top: 8px;">決済サービスID：<span th:text="${applyModel.settlementSettingId}"></span></p>
+                            <p align="left" style="word-break:normal; width:auto; display:block; white-space:pre-wrap; word-wrap : break-word ; overflow: hidden ;line-height:13px;">セキュリティコード１：<span th:text="${applyModel.securityCd}"></span></p>
+                            <p align="left" style="font-size: 11px;">※セキュリティコード2～4は入力不要です。</p>
+                        </div>
+                        <a th:href="'familymart-app-internal://open-url?url=' + ${applyModel.myKeyUrl}">マイキープラットフォーム</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script th:src="@{/js/jquery.min.js}"></script>
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+        <script th:src="@{/js/icheck.min.js}"></script>
+        <script th:src="@{/js/apply.js}"></script>
+    </body>
+</html>
