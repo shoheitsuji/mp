@@ -14,12 +14,10 @@
         <title>マイナポイント申込</title>
     </head>
     <body class="hold-transition login-page">
+          
         <div class="applybox" style="height:100%">
             <form role="form" action="#" th:action="@{/login}" th:object="${loginForm}" method="post" autocomplete="off">
-                <div class="apply-col-lg-1" align="center" style="padding-top: 15px;padding-bottom:15px;border-bottom:1.5px solid #00ab4e; clear:both;">
-                    <button id="fmApplyBtn" type="button" class="applybtn-1 btn-selected" data-toggle="modal" style="float:left;" th:onclick="|showFmApply(${applyModel.applyBtnActiveFlg});|">FamiPayから申込</button>
-                    <button id="myKeyApplyBtn" type="button" th:class="${applyModel.applyBtnActiveFlg != '1'}? 'applybtn_40 btn-disabled' : 'applybtn-2 btn-notSelected'" th:disabled="${applyModel.applyBtnActiveFlg != '1'}" data-toggle="modal" style="padding-left:10px;" th:onclick="|showMyKeyApply(${applyModel.applyBtnActiveFlg});|">マイキープラットフォームから申込</button>
-                </div>
+
         
                 <div id="fmApply" class="font_14 apply-col-lg-1" style="display:inline-block">
                     <span class="font_16">STEP1</span>
