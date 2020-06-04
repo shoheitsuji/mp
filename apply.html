@@ -5,25 +5,66 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="shortcut icon" type="image/ico" th:href="@{/favicon.ico}"/>
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/font-awesome.min.css" />
-        <link rel="stylesheet" href="css/ionicons.min.css" />
-        <link rel="stylesheet" href="css/AdminLTE.min.css" />
-        <link rel="stylesheet" href="css/blue.css" />
-        <link rel="stylesheet" href="css/mypoint.css" />
-        <title>マイナポイント申込</title>
+        <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+        <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}" />
+        <link rel="stylesheet" th:href="@{/css/ionicons.min.css}" />
+        <link rel="stylesheet" th:href="@{/css/AdminLTE.min.css}" />
+        <link rel="stylesheet" th:href="@{/css/blue.css}" />
+        <link rel="stylesheet" th:href="@{/css/mypoint.css}" />
+        <title>マイナポイント申込画面</title>
     </head>
-    <body class="hold-transition login-page">
-        <div class="applybox" style="height:100%; font-family: -apple-system, BlinkMacSystemFont; text-align: center;Padding:10px;">
-            
-           
-            
-            
-            <form role="form" action="#" th:action="@{/login}" th:object="${loginForm}" method="post" autocomplete="off">
+    
+    <style>
+  body{ 
+   font-family: -apple-system, BlinkMacSystemFont;
+   text-align: center;
+   Padding:10px;
+  }
+  h2{
+   font-size:200%;
+   margin:2px;
+  }
+  .red{color:red;}
+  p{
+   color:gray;
+  }
+  .box1{t
+  width:280px;
+  Padding:15px;
+  display:block;
+  background:#00c64f;
+  border-radius:30px;
+  text-align:center;
+Color:#fff;
+Font-weight:bold;
+Font-size:130%;
+margin: 15px auto;
 
-              <img src="img/famipay_logo.png">
-              <h2 class="font-weight-bold">マイナポイント申込</h2>
+}
+
+p.note { 
+ margin-left: 1em;
+ text-indent: -1em;
+ margin-bottom:0;
+ text-align:left;
+ font-size:86%;
+  }
+p.note:before { content:"※";}
+
+ </style>
+    
+    <body class="hold-transition login-page">
+        <div class="applybox" style="height:100%">
+            <form role="form" action="#" th:action="@{/login}" th:object="${loginForm}" method="post" autocomplete="off">
                 
+              <img src="img/famipay_logo.png">
+              <h2>マイナポイント申込</h2>
+                
+                <div class="apply-col-lg-1" align="center" style="padding-top: 15px;padding-bottom:15px;border-bottom:1.5px solid #00ab4e; clear:both;">
+                    <button id="fmApplyBtn" type="button" class="applybtn-1 btn-selected" data-toggle="modal" style="float:left;" th:onclick="|showFmApply(${applyModel.applyBtnActiveFlg});|">FamiPayから申込</button>
+                    <button id="myKeyApplyBtn" type="button" th:class="${applyModel.applyBtnActiveFlg != '1'}? 'applybtn_40 btn-disabled' : 'applybtn-2 btn-notSelected'" th:disabled="${applyModel.applyBtnActiveFlg != '1'}" data-toggle="modal" style="padding-left:10px;" th:onclick="|showMyKeyApply(${applyModel.applyBtnActiveFlg});|">マイキープラットフォームから申込</button>
+                </div>
+        
                 <div id="fmApply" class="font_14 apply-col-lg-1" style="display:inline-block">
                     <span class="font_16">STEP1</span>
                     <section>
