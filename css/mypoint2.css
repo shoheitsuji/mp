@@ -12,12 +12,12 @@ h2{
   
 .red{color:red;}
 
-p {color:gray;}
 p.note { 
  margin-left: 1em;
  text-indent: -1em;
  margin-bottom:0;
  text-align:left;
  font-size:86%;
+ color:gray;
   }
 p.note:before { content:"※";}
