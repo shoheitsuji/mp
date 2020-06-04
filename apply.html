@@ -11,7 +11,7 @@
         <link rel="stylesheet" th:href="@{/css/AdminLTE.min.css}" />
         <link rel="stylesheet" th:href="@{/css/blue.css}" />
         <link rel="stylesheet" th:href="@{/css/mypoint.css}" />
-        <title>マイナポイント申込画面</title>
+        <title>マイナポイント申込</title>
     </head>
     
     <style>
@@ -28,19 +28,7 @@
   p{
    color:gray;
   }
-  .box1{t
-  width:280px;
-  Padding:15px;
-  display:block;
-  background:#00c64f;
-  border-radius:30px;
-  text-align:center;
-Color:#fff;
-Font-weight:bold;
-Font-size:130%;
-margin: 15px auto;
 
-}
 
 p.note { 
  margin-left: 1em;
@@ -59,12 +47,15 @@ p.note:before { content:"※";}
                 
               <img src="img/famipay_logo.png">
               <h2>マイナポイント申込</h2>
-                
+               <p>ファミペイからカンタン申込<br />
+                   FamiPayチャージで25％還元（最大5,000円）</p>
+               <img src="img/mp_logo.png" style="max-width: 100%;">
+                <!--
                 <div class="apply-col-lg-1" align="center" style="padding-top: 15px;padding-bottom:15px;border-bottom:1.5px solid #00ab4e; clear:both;">
                     <button id="fmApplyBtn" type="button" class="applybtn-1 btn-selected" data-toggle="modal" style="float:left;" th:onclick="|showFmApply(${applyModel.applyBtnActiveFlg});|">FamiPayから申込</button>
                     <button id="myKeyApplyBtn" type="button" th:class="${applyModel.applyBtnActiveFlg != '1'}? 'applybtn_40 btn-disabled' : 'applybtn-2 btn-notSelected'" th:disabled="${applyModel.applyBtnActiveFlg != '1'}" data-toggle="modal" style="padding-left:10px;" th:onclick="|showMyKeyApply(${applyModel.applyBtnActiveFlg});|">マイキープラットフォームから申込</button>
                 </div>
-        
+                -->
                 <div id="fmApply" class="font_14 apply-col-lg-1" style="display:inline-block">
                     <span class="font_16">STEP1</span>
                     <section>
