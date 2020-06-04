@@ -2,15 +2,14 @@
    font-family: -apple-system, BlinkMacSystemFont;
    text-align: center;
    Padding:10px;
+   font-size:120%;
   }
 .midashi{
    font-size:200%;
    font-weight:bold;
    margin:5px 0 10px 0;
-   color :gray;
-   font-size:115%;
   }
-p{font-size:115%;}
+
 .note { 
  margin-left: 1em;
  text-indent: -1em;
