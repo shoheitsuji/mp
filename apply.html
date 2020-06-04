@@ -50,12 +50,15 @@ p.note:before { content:"※";}
                <p>ファミペイからカンタン申込<br />
                    FamiPayチャージで25％還元（最大5,000円）</p>
                <img src="img/mp_logo.png" style="max-width: 100%;">
+               <p><a href="https://famidigi.jp/famipay/mp/" target=_blank">詳しくはこちら</a></p>
+               <p>申込期間：2020年7月1日～2021年3月31日</p>
+                   
                 <!--
                 <div class="apply-col-lg-1" align="center" style="padding-top: 15px;padding-bottom:15px;border-bottom:1.5px solid #00ab4e; clear:both;">
                     <button id="fmApplyBtn" type="button" class="applybtn-1 btn-selected" data-toggle="modal" style="float:left;" th:onclick="|showFmApply(${applyModel.applyBtnActiveFlg});|">FamiPayから申込</button>
                     <button id="myKeyApplyBtn" type="button" th:class="${applyModel.applyBtnActiveFlg != '1'}? 'applybtn_40 btn-disabled' : 'applybtn-2 btn-notSelected'" th:disabled="${applyModel.applyBtnActiveFlg != '1'}" data-toggle="modal" style="padding-left:10px;" th:onclick="|showMyKeyApply(${applyModel.applyBtnActiveFlg});|">マイキープラットフォームから申込</button>
                 </div>
-                -->
+                
                 <div id="fmApply" class="font_14 apply-col-lg-1" style="display:inline-block">
                     <span class="font_16">STEP1</span>
                     <section>
@@ -71,6 +74,7 @@ p.note:before { content:"※";}
                     <section>
                         <span style="font-size:14px;">　ボタンよりマイナポイントアプリに移動して手続きを行ってください。</span>
                     </section>
+                -->
                     <div class="apply-col" style="width:100%;" align="center">
                         <button type="button" th:class="${applyModel.applyBtnActiveFlg != '1'}? 'applybtn_60 btn-disabled' : 'applybtn_60 btn-success'" data-toggle="modal" th:disabled="${applyModel.applyBtnActiveFlg != '1'}" th:onclick="|startAPP('${applyModel.urlWithAppLinkCode}');|"><span th:text="${applyModel.butTitleMsg}">マイナポイント申込</span></button>
                         <p class="font_11" align="center" style="padding-top: 10px;">【申込期間】<span style="font-size: 10px" th:text="${#dates.format(applyModel.applyStartDate,'yyyy年MM月dd日')}" >申込完了日</span>～<span style="font-size: 10px" th:text="${#dates.format(applyModel.applyEndDate,'yyyy年MM月dd日')}" >申込完了日</span></p>
