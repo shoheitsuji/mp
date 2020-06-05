@@ -20,5 +20,5 @@ p.note {
 p.note:before { content:"※";}
 
 .notearea{
- margin-top:10px;
+ margin-top:20px;
 }
